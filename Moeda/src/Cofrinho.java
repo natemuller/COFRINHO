@@ -48,8 +48,11 @@ public class Cofrinho {
     }
 
     public int getValorTotalCentavos() {
-
-        return 0;
+        int valorTotal = 0;
+        for (int i = 0; i < qtdMoedasAdicionadas; i++) {
+            valorTotal += colecaoMoedas[i].getValorCentavos();
+        }
+        return valorTotal;
     }
 
     public double getValorTotalReais() {
